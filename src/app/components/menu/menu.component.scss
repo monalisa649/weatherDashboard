@@ -64,12 +64,10 @@ $colorTxt:#d0d5db;
 
  .boton-buscar{
   float: left;
-  width: 25px;
-  height: 25px;
-  margin-left: 2px;
-  line-height: 30px;
-  align-content: center;
-  padding: 2px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  padding: 5px;
   border: 1px solid $colorTxt;
   border-radius: 5px;
   background: #8badd6;
@@ -83,6 +81,10 @@ $colorTxt:#d0d5db;
  .mat-icon{
    margin: 20px;
    font-size: 30px;
+ }
+
+ i{
+   color: #8E44AD;
  }
 
 
