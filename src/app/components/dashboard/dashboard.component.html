@@ -4,13 +4,62 @@
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title *ngIf="weather">
-           {{weather.name}}
-
-
+            Temperature
           </mat-card-title>
+
         </mat-card-header>
+
+        <div class="img-content">
+          <img src="/assets/img/temperature.png">
+
+        </div>
+
         <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+
+          <div class="card-content">
+
+            <table>
+              <tbody>
+                <tr>
+                  <td><i class="fas fa-thermometer-half"></i>Temperature:{{weather.main.temp}}°C</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-temperature-high"></i>Temperature Max:{{weather.main.temp_max}}°C</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-temperature-low"></i>Temperature Min:{{weather.main.temp_min}}°C</td>
+                </tr>
+
+
+              </tbody>
+            </table>
+
+
+          </div>
+
+
+
+          <div class="card-content">
+            <table>
+              <tbody>
+                <tr>
+                  <td><i class="fas fa-snowflake"></i>Feels like: {{weather.main.feels_like}}</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-water"></i>Humidity: {{weather.main.humidity}}</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-clock"></i>Pressure:{{weather.main.pressure}}</td>
+                </tr>
+
+
+              </tbody>
+            </table>
+
+
+
+          </div>
+
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
@@ -21,13 +70,13 @@
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
-           titulo aca
-
-
+           Weather
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+          <div>
+
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>

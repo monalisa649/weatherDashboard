@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http/';
 import { environment } from 'src/environments/environment';
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -21,7 +22,10 @@ export class DataServiceService {
   }
 
   getWeather(name:string){
-    return this._htpp.get(`${this.url}${name}&appid=${this.key}`);
+    return this._htpp.get(`${this.url}${name}&units=metric&appid=${this.key}`);
+    // .pipe(map(res=>{
+    //   return res['main'];
+    // }));
 
   }
 
