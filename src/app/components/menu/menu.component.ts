@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { DataServiceService } from 'src/app/services/data-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-menu',
@@ -38,13 +39,8 @@ getWeather(cityName:string){
     .subscribe((res:Response) =>{
     this.weatherRes = res;
     console.log(this.weatherRes);
-   })
-
-
-
-
-
-    }
+   },err => Swal.fire('City not found')
+   )}
 
 
   sendLocation(cityName: HTMLInputElement){

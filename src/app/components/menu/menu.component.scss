@@ -9,6 +9,7 @@ $colorTxt:#d0d5db;
 
 }
 
+
 .sidenav {
   width: 200px;
   background: linear-gradient(180deg,  #3f51b5,  #2f3f70);
@@ -17,10 +18,13 @@ $colorTxt:#d0d5db;
 
 .sidenav .mat-toolbar {
   background: inherit;
-  color:$colorTxt;
+  color:whitesmoke;
   border-color: $colorTxt;
   font-size: 25px;
   margin: 8px;
+  i{
+    color: #F900B1;
+  }
 
 }
 
@@ -28,6 +32,7 @@ $colorTxt:#d0d5db;
   position: sticky;
   top: 0;
   z-index: 1;
+
 }
 
 .mat-list-item {
@@ -76,16 +81,22 @@ $colorTxt:#d0d5db;
     background: #b3ceec;
 
   }
- }
 
- .mat-icon{
-   margin: 20px;
-   font-size: 30px;
+  i{
+    font-size: 18px;
+    color: #F900B1;
+    opacity: 0.7;
+  }
  }
 
  i{
-   color: #8E44AD;
- }
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  margin-right: 10px;
+  color: whitesmoke;
+
+  }
 
 
 

@@ -3,11 +3,11 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar><i class="fas fa-rainbow"></i>Weather</mat-toolbar>
+    <mat-toolbar><i class="fas fa-rainbow"></i>Dashboard</mat-toolbar>
     <form  (submit)='sendLocation(cityName)'>
     <mat-form-field floatLabel="never" color="accent">
-      <mat-label>City name</mat-label>
-      <input matInput name="ciudad" #cityName>
+      <mat-label style="color: #d0d5db;">City name</mat-label>
+      <input matInput name="ciudad" #cityName autocomplete="off">
       <button class="boton-buscar">
         <i class="fas fa-search"></i>
       </button>
@@ -15,34 +15,16 @@
   </form>
 
     <mat-nav-list>
-      <a mat-list-item href="#"><mat-icon><span class="material-icons-outlined">
-        nights_stay
-        </span></mat-icon>Icono</a>
-        <a mat-list-item href="#"><mat-icon><span class="material-icons-outlined">
-          nights_stay
-          </span></mat-icon>Icono</a>
-          <a mat-list-item href="#"><mat-icon><span class="material-icons-outlined">
-            nights_stay
-            </span></mat-icon>Icono</a>
-            <a mat-list-item href="#"><mat-icon><span class="material-icons-outlined">
-              nights_stay
-              </span></mat-icon>Icono</a>
-              <a mat-list-item href="#"><mat-icon><span class="material-icons-outlined">
-                nights_stay
-                </span></mat-icon>Icono</a>
-                <a mat-list-item href="#"><mat-icon><span class="material-icons-outlined">
-                  nights_stay
-                  </span></mat-icon>Icono</a>
-                  <a mat-list-item href="#"><mat-icon><span class="material-icons-outlined">
-                    nights_stay
-                    </span></mat-icon>Icono</a>
+      <a mat-list-item href="#"><i class="fas fa-smog"></i>Weather</a>
+        <a mat-list-item href="#"><i class="fas fa-coins"></i>Coin</a>
+          <a mat-list-item href="#"><i class="fas fa-language"></i>Language</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
+              <i class="fas fa-city"></i>{{weatherRes.name}}
 
-
-      <button
+     <button
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
@@ -55,7 +37,7 @@
 
 
     <app-dashboard [weather]="weatherRes"></app-dashboard>
-    <!-- Add Content Here -->
+
 
   </mat-sidenav-content>
 </mat-sidenav-container>
