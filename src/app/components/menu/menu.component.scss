@@ -1,73 +1,63 @@
-$colorTxt:#d0d5db;
-
+$colorTxt: #d0d5db;
 
 .sidenav-container {
   height: 100%;
-  background-image: url('/assets/img/contries.jpg');
+  background-image: url("/assets/img/contries.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-
 }
-
 
 .sidenav {
   width: 200px;
-  background: linear-gradient(180deg,  #3f51b5,  #2f3f70);
-  ;
+  background: linear-gradient(180deg, #3f51b5, #2f3f70);
 }
 
 .sidenav .mat-toolbar {
   background: inherit;
-  color:whitesmoke;
+  color: whitesmoke;
   border-color: $colorTxt;
   font-size: 25px;
   margin: 8px;
-  i{
-    color: #F900B1;
+  i {
+    color: #f900b1;
   }
-
 }
 
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
-
 }
 
 .mat-list-item {
-  border-bottom: 1px solid  #5d6d7e ;
+  border-bottom: 1px solid #5d6d7e;
   color: $colorTxt;
-
 }
-.mat-form-field{
+.mat-form-field {
   margin: 5px;
-  color:$colorTxt
+  color: $colorTxt;
 }
 
- input{
+input {
   float: left;
   width: 70%;
   padding: 5px;
-   margin-left: 2px;
+  margin-left: 2px;
   justify-content: center;
-   line-height: 25px;
-   text-align: center;
-   color:$colorTxt;
- }
+  line-height: 25px;
+  text-align: center;
+  color: $colorTxt;
+}
 
- .boton{
-
-   text-decoration: none;
-   font-size: 20px;
-   padding: 2px;
-   margin: 2px;
+.boton {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 2px;
+  margin: 2px;
   border-radius: 5px;
+}
 
-
- }
-
- .boton-buscar{
+.boton-buscar {
   float: left;
   width: 30px;
   height: 30px;
@@ -77,26 +67,21 @@ $colorTxt:#d0d5db;
   border-radius: 5px;
   background: #8badd6;
 
-      &:hover{
+  &:hover {
     background: #b3ceec;
-
   }
 
-  i{
+  i {
     font-size: 18px;
-    color: #F900B1;
+    color: #f900b1;
     opacity: 0.7;
   }
- }
+}
 
- i{
+i {
   color: white;
   font-weight: bold;
   font-size: 25px;
   margin-right: 10px;
   color: whitesmoke;
-
-  }
-
-
-
+}

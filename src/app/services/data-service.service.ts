@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http/';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
+import { Weather } from '../interfaces/weatherInterface';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -21,8 +23,8 @@ export class DataServiceService {
 
   }
 
-  getWeather(name:string){
-    return this._htpp.get(`${this.url}${name}&units=metric&appid=${this.key}`);
+  getWeather(name:string):Observable<Weather>{
+    return this._htpp.get<Weather>(`${this.url}${name}&units=metric&appid=${this.key}`);
     // .pipe(map(res=>{
     //   return res['main'];
     // }));

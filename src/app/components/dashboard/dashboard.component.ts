@@ -1,4 +1,6 @@
 import { Component, Input} from '@angular/core';
+import { Weather } from 'src/app/interfaces/weatherInterface';
+
 
 
 
@@ -8,8 +10,8 @@ import { Component, Input} from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-  @Input() weather : any;
-  /** Based on the screen size, switch from standard to one column per row */
+  @Input() weather : Weather;
+
 
 
   constructor() {}

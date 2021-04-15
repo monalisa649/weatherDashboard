@@ -7,7 +7,7 @@
     <form  (submit)='sendLocation(cityName)'>
     <mat-form-field floatLabel="never" color="accent">
       <mat-label style="color: #d0d5db;">City name</mat-label>
-      <input matInput name="ciudad" #cityName autocomplete="off">
+      <input matInput  #cityName autocomplete="off">
       <button class="boton-buscar">
         <i class="fas fa-search"></i>
       </button>
@@ -22,7 +22,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-              <i class="fas fa-city"></i>{{weatherRes.name}}
+              <i class="fas fa-city"></i>{{weather.name}}
 
      <button
         type="button"
@@ -36,7 +36,7 @@
     </mat-toolbar>
 
 
-    <app-dashboard [weather]="weatherRes"></app-dashboard>
+    <app-dashboard [weather]="weather"></app-dashboard>
 
 
   </mat-sidenav-content>
