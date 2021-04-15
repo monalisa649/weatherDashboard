@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
-export class MenuComponent implements OnInit, AfterContentInit {
+export class MenuComponent implements OnInit {
   weather: Weather;
   public cityName: string;
 
@@ -33,10 +33,7 @@ export class MenuComponent implements OnInit, AfterContentInit {
     this.getWeather(this.cityName);
   }
 
-  ngAfterContentInit(){
-    this.cityName;
-    console.log(this.cityName);
-  }
+
 
   getWeather(cityName: string) {
     if(cityName==""){
