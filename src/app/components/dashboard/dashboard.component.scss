@@ -35,13 +35,12 @@ $colorTxt: #d0d5db;
 }
 
 .card-content {
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  float: left;
-  align-items: center;
   width: 50%;
   height: 218px;
+  float: left;
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
 }
 
 i {
@@ -83,11 +82,13 @@ table {
 
   .caja {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     width: 25%;
     height: 80px;
+    margin-top: 20px;
     margin: 15px;
     padding: 5px;
-    line-height: 90px;
     border: 2px solid $colorTxt;
     border-radius: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
@@ -120,4 +121,35 @@ P {
   font-weight: bold;
   margin-top: 5px;
   margin-bottom: 0%;
+}
+
+@media (max-width: 489px) {
+  table {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 2px;
+    font-size: 12px;
+  }
+
+  i {
+    display: none;
+    font-size: 14px;
+  }
+
+  img {
+    display: none;
+  }
+}
+@media (max-with: 600) {
+  p {
+    font-size: 12px;
+  }
+
+  span {
+    text-decoration: none;
+  }
+
+  img {
+    display: none;
+  }
 }

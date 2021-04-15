@@ -1,9 +1,6 @@
 import { Component, Input} from '@angular/core';
 import { Weather } from 'src/app/interfaces/weatherInterface';
 
-
-
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -11,8 +8,6 @@ import { Weather } from 'src/app/interfaces/weatherInterface';
 })
 export class DashboardComponent {
   @Input() weather : Weather;
-
-
 
   constructor() {}
 

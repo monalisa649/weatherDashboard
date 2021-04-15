@@ -39,12 +39,20 @@ export class MenuComponent implements OnInit, AfterContentInit {
   }
 
   getWeather(cityName: string) {
+    if(cityName==""){
+      Swal.fire('Invalid name')
+    }
     this._dataService.getWeather(cityName).subscribe(
       (res: Weather) => {
         this.weather = res;
         console.log(this.weather);
       },
-      (err) => Swal.fire('City not found')
+      (err) => {
+        if(err.status=="404")
+        Swal.fire('City not found');
+
+      }
+
     );
   }
 
